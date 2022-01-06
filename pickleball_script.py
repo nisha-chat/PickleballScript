@@ -50,27 +50,6 @@ participants.send_keys("1")
 participants = driver.find_element_by_name("aci_19392")
 participants.send_keys("NC")
 
-
-# try:
-#     driver.find_element_by_xpath("/html/body/div[2]/div/div[2]/div[3]/div[1]/table/tbody/tr[6]/td/div/form/table/tbody/tr[3]/td/div/div/table/tbody/tr[3]/td/table/tbody/tr/td/table/tbody/tr[4]/td/table/tbody/tr/td/table/tbody/tr[2]/td[5]/input").click()
-# except:
-#     print("8am taken")
-
-# try:
-#     driver.find_element_by_xpath("/html/body/div[2]/div/div[2]/div[3]/div[1]/table/tbody/tr[6]/td/div/form/table/tbody/tr[3]/td/div/div/table/tbody/tr[3]/td/table/tbody/tr/td/table/tbody/tr[4]/td/table/tbody/tr/td/table/tbody/tr[2]/td[6]/input").click()
-# except:
-#     print("9am taken")
-
-# try:
-#     driver.find_element_by_xpath("/html/body/div[2]/div/div[2]/div[3]/div[1]/table/tbody/tr[6]/td/div/form/table/tbody/tr[3]/td/div/div/table/tbody/tr[3]/td/table/tbody/tr/td/table/tbody/tr[4]/td/table/tbody/tr/td/table/tbody/tr[2]/td[7]/input").click()
-# except:
-#     print("10am taken")
-
-# try:
-#     driver.find_element_by_xpath("/html/body/div[2]/div/div[2]/div[3]/div[1]/table/tbody/tr[6]/td/div/form/table/tbody/tr[3]/td/div/div/table/tbody/tr[3]/td/table/tbody/tr/td/table/tbody/tr[4]/td/table/tbody/tr/td/table/tbody/tr[2]/td[8]/input").click()
-# except:
-#     print("11am taken")
-
 try:
     driver.find_element_by_xpath("/html/body/div[2]/div/div[2]/div[3]/div[1]/table/tbody/tr[6]/td/div/form/table/tbody/tr[3]/td/div/div/table/tbody/tr[3]/td/table/tbody/tr/td/table/tbody/tr[4]/td/table/tbody/tr/td/table/tbody/tr[2]/td[9]/input").click();
 except:
@@ -150,9 +129,5 @@ except:
 # replace middle two numbers with tomorrow morning's month and day (respectively)
 pause.until(datetime(2022, 1, 6, 6))
 driver.find_elements_by_class_name("button_wcag2")[1].click();
-
-
-
-
 
    
