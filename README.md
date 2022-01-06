@@ -16,7 +16,7 @@ Make sure to choose the correct one based on your Chrome Version (https://help.z
 
 ## Step 3
 
-Locally save pickleball_script.py to your Desktop
+Locally save pickleball_script.py to your Desktop (You can do this by selecting "Code" in the green box on this page and selecting "Download Zip")
 
 Open the file with TextEdit
 
