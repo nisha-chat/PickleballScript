@@ -22,10 +22,9 @@ driver.maximize_window()
 username = driver.find_element_by_id("ctl05_ctlLoginLayout_txtUserName")
 password = driver.find_element_by_id("ctl05_ctlLoginLayout_txtPassword")
 
-today = datetime.datetime.now()
-sleep = (datetime.datetime(today.year, today.month, today.day, 6, 0, 0) - today).seconds
+sleep = (datetime.datetime(today.year, today.month, today.day+1, 5, 59, 59) - today).seconds
 print('Waiting for ' + str(datetime.timedelta(seconds=sleep)))
-print(datetime.datetime(today.year, today.month, today.day, 6, 0, 0) - today)
+print(datetime.datetime(today.year, today.month, today.day+1, 5, 59, 59) - today)
 time.sleep(sleep)
 
 # replace username with your username and password with your password
