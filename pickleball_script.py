@@ -22,8 +22,8 @@ driver.maximize_window()
 username = driver.find_element_by_id("ctl05_ctlLoginLayout_txtUserName")
 password = driver.find_element_by_id("ctl05_ctlLoginLayout_txtPassword")
 
-# replace 2022, 1, 13 with date of 4 days from tomorrow
-target = datetime.datetime(2022,1,13,5,59,0)
+# replace 2022, 1, 9 with tomorrow's date
+target = datetime.datetime(2022,1,9,5,59,0)
 
 now = datetime.datetime.now()
 delta = target - now
@@ -46,7 +46,7 @@ select.select_by_visible_text('MH Paddleball/Pickleball Court')
 
 select = Select(driver.find_element_by_id('begd'))
 # replace 10 with the date for 4 days from tomorrow (tomorrow is the 7th so we put the 11th)
-select.select_by_visible_text('12')
+select.select_by_visible_text('13')
 
 driver.find_element_by_class_name("button_wcag2").click();
 
@@ -72,14 +72,14 @@ except:
         except:
             print("7pm taken")
 
-# replace 2022, 1, 13 with date of 4 days from tomorrow
-target = datetime.datetime(2022,1,13,6,0,0)
+# replace 2022, 1, 9 with tomorrow's date
+target = datetime.datetime(2022,1,9,6,0,0)
 
 now = datetime.datetime.now()
 delta = target - now
 if delta > datetime.timedelta(0):
-    print('will sleep: %s' % delta)
     time.sleep(delta.total_seconds())
+    
 driver.find_elements_by_class_name("button_wcag2")[1].click();
 
    
