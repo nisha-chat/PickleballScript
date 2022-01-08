@@ -22,10 +22,14 @@ driver.maximize_window()
 username = driver.find_element_by_id("ctl05_ctlLoginLayout_txtUserName")
 password = driver.find_element_by_id("ctl05_ctlLoginLayout_txtPassword")
 
-sleep = (datetime.datetime(today.year, today.month, today.day+1, 5, 59, 59) - today).seconds
-print('Waiting for ' + str(datetime.timedelta(seconds=sleep)))
-print(datetime.datetime(today.year, today.month, today.day+1, 5, 59, 59) - today)
-time.sleep(sleep)
+# replace 2022, 1, 13 with date of 4 days from tomorrow
+target = datetime.datetime(2022,1,13,5,59,0)
+
+now = datetime.datetime.now()
+delta = target - now
+if delta > datetime.timedelta(0):
+    print('will sleep: %s' % delta)
+    time.sleep(delta.total_seconds())
 
 # replace username with your username and password with your password
 username.send_keys("your username")
@@ -42,7 +46,7 @@ select.select_by_visible_text('MH Paddleball/Pickleball Court')
 
 select = Select(driver.find_element_by_id('begd'))
 # replace 10 with the date for 4 days from tomorrow (tomorrow is the 7th so we put the 11th)
-select.select_by_visible_text('11')
+select.select_by_visible_text('12')
 
 driver.find_element_by_class_name("button_wcag2").click();
 
@@ -68,7 +72,14 @@ except:
         except:
             print("7pm taken")
 
+# replace 2022, 1, 13 with date of 4 days from tomorrow
+target = datetime.datetime(2022,1,13,6,0,0)
 
+now = datetime.datetime.now()
+delta = target - now
+if delta > datetime.timedelta(0):
+    print('will sleep: %s' % delta)
+    time.sleep(delta.total_seconds())
 driver.find_elements_by_class_name("button_wcag2")[1].click();
 
    
