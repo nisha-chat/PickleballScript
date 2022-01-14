@@ -23,13 +23,19 @@ username = driver.find_element_by_id("ctl05_ctlLoginLayout_txtUserName")
 password = driver.find_element_by_id("ctl05_ctlLoginLayout_txtPassword")
 
 # replace 2022, 1, 9 with tomorrow's date
-target = datetime.datetime(2022,1,9,5,59,0)
+target = datetime.datetime(2022,1,15,5,59,0)
 
 now = datetime.datetime.now()
 delta = target - now
 if delta > datetime.timedelta(0):
     print('will sleep: %s' % delta)
-    time.sleep(delta.total_seconds())
+    time.sleep(delta.total_seconds()/4)
+    print('sleep for: %s' % ((delta.total_seconds())/4))
+    time.sleep(delta.total_seconds()/4)
+    print('sleep for: %s' % ((delta.total_seconds())/4))
+    time.sleep(delta.total_seconds()/4)
+    print('sleep for: %s' % ((delta.total_seconds())/4))
+    time.sleep(delta.total_seconds()/4)
 
 # replace username with your username and password with your password
 username.send_keys("your username")
@@ -46,7 +52,7 @@ select.select_by_visible_text('MH Paddleball/Pickleball Court')
 
 select = Select(driver.find_element_by_id('begd'))
 # replace 10 with the date for 4 days from tomorrow (tomorrow is the 7th so we put the 11th)
-select.select_by_visible_text('13')
+select.select_by_visible_text('19')
 
 driver.find_element_by_class_name("button_wcag2").click();
 
@@ -73,7 +79,7 @@ except:
             print("7pm taken")
 
 # replace 2022, 1, 9 with tomorrow's date
-target = datetime.datetime(2022,1,9,6,0,0)
+target = datetime.datetime(2022,1,15,6,0,0)
 
 now = datetime.datetime.now()
 delta = target - now
